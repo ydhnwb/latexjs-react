@@ -21,6 +21,7 @@ const LaTeXComponent = ({ expression, escape }: Props) => {
   useEffect(() => {
     const loadLatexModule = async () => {
       try {
+        // @next/next/no-assign-module-variable
         const module = await import('@/latex.mjs');
 
         // Define the custom element if not already defined
