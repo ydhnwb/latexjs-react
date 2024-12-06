@@ -1,8 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-// Import the locally saved LaTeX.js file
-import '@/latex.mjs';  // Adjust path if necessary
-
 
 interface Props {
   expression: string;
