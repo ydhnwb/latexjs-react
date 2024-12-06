@@ -21,12 +21,11 @@ const LaTeXComponent = ({ expression, escape }: Props) => {
   useEffect(() => {
     const loadLatexModule = async () => {
       try {
-        // @next/next/no-assign-module-variable
-        const module = await import('@/latex.mjs');
+        const latexModule = await import('@/latex.mjs');
 
         // Define the custom element if not already defined
         if (!customElements.get('latex-js')) {
-          customElements.define('latex-js', module.LaTeXJSComponent);
+          customElements.define('latex-js', latexModule.LaTeXJSComponent);
         }
 
         setIsLoaded(true); // After the module is loaded, update the state
