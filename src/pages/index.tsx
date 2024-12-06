@@ -34,13 +34,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
+      <div style={{flexDirection: 'column', display: 'flex'}}>
+      <a href="https://latex.js.org/playground.html" target="_blank">Based on this latexjs library</a>
       <textarea
         value={latex} // Bind textarea value to state
         onChange={handleTextareaChange} // Update state on textarea change
         rows={10}
         cols={50}
-        placeholder="Enter your LaTeX code here with delimiters"
+        placeholder="Enter your LaTeX code"
       />
+
+      </div>
+
 
       <h2>Rendered Output:</h2>
         <LatexComponent expression={latex} />
